@@ -1,7 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: #D9AFD9 !important;
   background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  margin: 25px 0 25px 0;
+}
+
+main {
+  font-size: medium;
+  margin: 25px 0 25px 0;
+}
+main h1 {
+  margin-bottom: 25px;
 }/*# sourceMappingURL=style.css.map */

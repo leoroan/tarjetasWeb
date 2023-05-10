@@ -17,34 +17,37 @@
     </header>
 
     <main class="container d-flex flex-column">
+
         <h1 class="d-flex justify-content-center"> tarjetasWeb</h1>
         <p class="d-flex justify-content-center">
-            Tarjetas de saludos personalizadas con consulta de asistencia!
+            Tarjetas de saludos personalizadas con consulta de asistencia.
         </p>
 
-        <h2> nother thign to say? goes here</h2>
+        <div class="portrait container-fluid ">
+            <img class="img-fluid shadow" src="/images/foto15anios.jpg" alt="foto de la cumpleañera de 15 años.">
+        </div>
 
-        <form method="POST" 
-            action="https://script.google.com/macros/s/AKfycbyv3fws6fSGKY-T5VDxolUR3GB8sAhvFFRRd6PclUCb38co_LSOHnOMjh16-OrNkTtS-A/exec"
-            class="container" id="contacto">
-            <!-- <label>¿Asistirás?</label> -->
-            <select name="asistencia" id="asistencia" required>
-                <option value="">¿Asistirás?</option>
-                <option value="si">Sí</option>
-                <option value="no">No</option>
-                <option value="talves">Tal vez</option>
-            </select>
-            <br>
-            <!-- <label>Nombre:</label> -->
-            <input placeholder="Nombre" type="text" name="nombre" id="nombre" required>
-            <br>
-            <!-- <label>Apellido:</label> -->
-            <input placeholder="Apellido" type="text" name="apellido" id="apellido" required>
-            <br><br>
-            <input type="submit" value="Enviar">
-        </form>
+        <div class="formTeiner">
+            <form method="POST"
+                action="https://script.google.com/macros/s/AKfycbyv3fws6fSGKY-T5VDxolUR3GB8sAhvFFRRd6PclUCb38co_LSOHnOMjh16-OrNkTtS-A/exec"
+                id="contacto">
+
+                <!-- <label>mail:</label> -->
+                <span class="input"><input placeholder="E-mail" type="email" name="asistencia"
+                        pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required></span>
+
+                <!-- <label>Nombre:</label> -->
+                <span class="input"><input placeholder="Nombre" type="text" name="nombre" required></span>
 
 
+                <!-- <label>Apellido:</label> -->
+                <span class="input"><input placeholder="Apellido" type="text" name="apellido" required></span>
+
+                <span class="input"><input type="submit" value="enviar"></span>
+
+
+            </form>
+        </div>
     </main>
     <footer>
 

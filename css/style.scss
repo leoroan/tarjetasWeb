@@ -12,17 +12,16 @@
 $colorPrincipal :#D9AFD9;
 $colorSecundario :#97D9E1;
 
-html,
-body {
-    // width: 100vw;
-    height: 100%;
-}
-
 body {
     // background-color: $colorPrincipal !important;
     background-image: linear-gradient(0deg, $colorPrincipal 0%, $colorSecundario 100%);
     background-size: cover;
-    margin: 25px 0 25px 0;
+    margin: 25px 0 15px 0;
+    height: 100%;
+
+    header {
+        margin-top: 5px;
+    }
 }
 
 .portrait {
@@ -30,17 +29,40 @@ body {
     justify-content: center;
     align-items: center;
 
-    margin: 25px 0 50px 0;
+    margin: 15px 0 50px 0;
     img {
-        height: 100vh;
-        // width: 100vw;
+        // height: 100vh;
+        width: 75%;
+        border-radius: 15px;
+        box-shadow: 2px 2px 5px black, 2px 2px 5px black, 3px 3px 15px white !important;
     }
 }
 
 .formTeiner {
     display: flex;
     justify-content: center;
+    align-items: baseline;
     margin: 25px 0 50px 0;
+    width: 50%;
+    h2 {
+        display: inline-block;
+    }
+
+    form{
+        display: flex;
+
+        .btn {
+            width: 25%;
+        }
+
+        input {
+            box-shadow: 2px 2px 3px $colorPrincipal, 2px 2px 3px black !important;
+        }
+
+        .btn:hover {
+            background-color: #97D9E1 !important;
+        }
+    }
 }
 
 
@@ -53,5 +75,73 @@ main {
     h1 {
         width: 100%;
         margin-bottom: 25px;
+    }
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+}
+
+@media screen and (min-width: 1200px ) {
+    //css code
+    .portrait {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        margin: 25px 0 50px 0;
+        img {
+            // height: 100vh;
+            width: 45%;
+            box-shadow: 2px 2px 5px black, 2px 2px 5px black, 3px 3px 15px white !important;
+        }
+    }
+
+    body {
+        header {
+            margin-top: 50px;
+            // display: flex;
+            // position: fixed;
+        }
+       
+    }
+
+    .formTeiner {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        margin: 25px 0 50px 0;
+        width: 50%;
+        h2 {
+            display: inline-block;
+        }
+    
+        form{
+            display: flex;
+    
+            .btn {
+                width: 25%;
+            }
+    
+            input {
+                box-shadow: 2px 2px 3px $colorPrincipal, 2px 2px 3px black !important;
+            }
+    
+            .btn:hover {
+                background-color: #97dae180 !important;
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        justify-content: center;
+        // align-items: center;
+        // align-content: center;
     }
 }

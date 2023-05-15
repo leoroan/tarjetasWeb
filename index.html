@@ -11,19 +11,22 @@
     <!-- favicon -->
 </head>
 
-<body class="d-flex flex-column">
+<body class="container-fluid d-flex flex-column">
+
     <header class="text-center">
-        <h1 class="d-flex justify-content-center"> tarjetasWeb</h1>
-        <p class="d-flex justify-content-center">
-            Tarjetas de saludos personalizadas con consulta de asistencia.
-        </p>
+        <h1>Mis 15 años</h1>
     </header>
 
-    <main>
-        
-        <div class="portrait container-fluid ">
-            <img class="img-fluid shadow" src="images/foto15anios.jpg" alt="foto de la cumpleañera de 15 años.">
+    <main class="container-fluid">
+
+        <!-- <div class="portrait">
+            <img class="img-fluid shadow" src="images/cumple15.jpeg" alt="foto de tarjeta de invitacion.">
+        </div> -->
+
+        <div class="d-flex justify-content-center align-items-center">
+            <img class="img-fluid shadow" src="images/cumple15.jpeg" alt="foto de tarjeta de invitacion.">
         </div>
+
 
         <div class="formTeiner">
             <form method="POST"
@@ -31,23 +34,29 @@
                 id="contacto">
 
                 <!-- <label>mail:</label> -->
-                <span class="input"><input placeholder="E-mail" type="email" name="asistencia"
+                <span class="input"><input placeholder="tu E-mail" type="email" name="asistencia"
                         pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required></span>
 
                 <!-- <label>Nombre:</label> -->
-                <span class="input"><input placeholder="Nombre" type="text" name="nombre" required></span>
-
+                <span class="input"><input placeholder="tu Nombre" type="text" name="nombre" required></span>
 
                 <!-- <label>Apellido:</label> -->
-                <span class="input"><input placeholder="Apellido" type="text" name="apellido" required></span>
+                <span class="input"><input placeholder="tu Apellido" type="text" name="apellido" required></span>
+
+                <!-- <label>Apellido:</label> -->
+                <span class="input"><input placeholder="Cuantos son?" type="number" name="cantida" required></span>
 
                 <span class="input"><input type="submit" value="enviar"></span>
+
             </form>
         </div>
-        
+
     </main>
-    <footer>
-        <!-- <h1> im a fancy footer</h1> -->
+    <footer class="container-fluid text-center">
+        <h4> TarjetasWeb</h4>
+        <p>
+            Tarjetas de saludos personalizadas con consulta de asistencia.
+        </p>
     </footer>
 
     <!-- SCRIPTS ZONE -->

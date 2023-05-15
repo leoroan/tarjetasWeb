@@ -27,6 +27,7 @@ body {
 
     header {
         margin-top: 15px;
+        position: fixed;
     }
 }
 
@@ -34,20 +35,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px 0 5px 0;
+    margin: 5px 0 5px 0;    
 
     img {
         width: auto;
-        border-radius: 15px;
+        // width: 50%;
+        height: auto;
+        border-radius: 15px !important;
         box-shadow: 2px 2px 5px black, 2px 2px 5px black, 3px 3px 15px white !important;
     }
 }
+
+
 
 .formTeiner {
     display: flex;
     justify-content: center;
     align-items: baseline;
     margin: 25px 0 50px 0;
+
+    .btn-primary {
+        background-color: #97D9E1;
+        border-color: #97D9E1;
+
+        &:hover {
+            background-color: #D9AFD9;
+            border-color: #ebddeb;
+        }
+    }
 }
 
 

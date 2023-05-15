@@ -13,7 +13,7 @@
 
 <body class="container-fluid d-flex flex-column">
 
-    <header class="text-center">
+    <header class="container-fluid text-center">
         <h1>Mis 15 años</h1>
     </header>
 
@@ -23,32 +23,40 @@
             <img class="img-fluid shadow" src="images/cumple15.jpeg" alt="foto de tarjeta de invitacion.">
         </div> -->
 
-        <div class="d-flex justify-content-center align-items-center">
-            <img class="img-fluid shadow" src="images/cumple15.jpeg" alt="foto de tarjeta de invitacion.">
+        <div class="portrait d-flex justify-content-center align-items-center">
+            <img class="img-fluid" src="images/cumple15.jpeg" alt="foto de tarjeta de invitacion.">
         </div>
 
 
         <div class="formTeiner">
             <form method="POST"
                 action="https://script.google.com/macros/s/AKfycbyv3fws6fSGKY-T5VDxolUR3GB8sAhvFFRRd6PclUCb38co_LSOHnOMjh16-OrNkTtS-A/exec"
-                id="contacto">
-
-                <!-- <label>mail:</label> -->
-                <span class="input"><input placeholder="tu E-mail" type="email" name="asistencia"
-                        pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required></span>
-
-                <!-- <label>Nombre:</label> -->
-                <span class="input"><input placeholder="tu Nombre" type="text" name="nombre" required></span>
-
-                <!-- <label>Apellido:</label> -->
-                <span class="input"><input placeholder="tu Apellido" type="text" name="apellido" required></span>
-
-                <!-- <label>Apellido:</label> -->
-                <span class="input"><input placeholder="Cuantos son?" type="number" name="cantida" required></span>
-
-                <span class="input"><input type="submit" value="enviar"></span>
-
+                id="contacto" class="row g-3">
+                <div class="col-md-6">
+                    <label for="asistencia" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" id="asistencia" name="asistencia" placeholder="tu E-mail"
+                        pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="tu Nombre" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="apellido" class="form-label">Apellido:</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="tu Apellido"
+                        required>
+                </div>
+                <div class="col-md-6">
+                    <label for="cantidad" class="form-label">Cantidad de personas a asistir:</label>
+                    <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="Cuantos son?"
+                        required>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
             </form>
+
+
         </div>
 
     </main>

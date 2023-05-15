@@ -22,6 +22,7 @@ body {
 }
 body header {
   margin-top: 15px;
+  position: fixed;
 }
 
 .portrait {
@@ -32,7 +33,8 @@ body header {
 }
 .portrait img {
   width: auto;
-  border-radius: 15px;
+  height: auto;
+  border-radius: 15px !important;
   box-shadow: 2px 2px 5px black, 2px 2px 5px black, 3px 3px 15px white !important;
 }
 
@@ -41,6 +43,14 @@ body header {
   justify-content: center;
   align-items: baseline;
   margin: 25px 0 50px 0;
+}
+.formTeiner .btn-primary {
+  background-color: #97D9E1;
+  border-color: #97D9E1;
+}
+.formTeiner .btn-primary:hover {
+  background-color: #D9AFD9;
+  border-color: #ebddeb;
 }
 
 main {

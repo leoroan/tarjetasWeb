@@ -1,8 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Dancing Script', cursive;
 }
 
 ::-webkit-scrollbar {
@@ -27,7 +26,14 @@ body {
 
     header {
         margin-top: 15px;
-        position: fixed;
+        position: relative;
+
+        h1 {
+            font-size: 700%;
+            font-weight: bold;
+            color: #D9AFD9;
+            text-shadow: 2px 4px 5px rgba(255, 255, 255, 0.8), 2px 4px 1px rgba(2, 2, 2, 0.8);
+        }
     }
 }
 
@@ -35,7 +41,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px 0 5px 0;    
+    margin: 0 0 5px 0;
 
     img {
         width: auto;
@@ -43,6 +49,36 @@ body {
         height: auto;
         border-radius: 15px !important;
         box-shadow: 2px 2px 5px black, 2px 2px 5px black, 3px 3px 15px white !important;
+        transition: transform 0.4s ease-in-out;
+        animation: none;
+
+        &:hover {
+            transform: scale(1.1);
+            animation: shake 0.4s ease-in-out;
+            transition: transform 0.2s ease-in-out;
+        }
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    75% {
+        transform: translateX(5px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
 
@@ -52,23 +88,40 @@ body {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    margin: 25px 0 50px 0;
+    margin: 25px 0 20px 0;
 
     .btn-primary {
+        font-size: 35px;
         background-color: #97D9E1;
         border-color: #97D9E1;
+        box-shadow: 1px 1px 2px black, 1px 1px 4px #fff;
 
         &:hover {
             background-color: #D9AFD9;
             border-color: #ebddeb;
         }
     }
+
+    h2 {
+        font-size: 475%;
+        color: #97D9E1;
+        font-weight: bold;
+        text-shadow: 2px 4px 5px rgba(255, 255, 255, 0.8), 1px 1px 1px rgba(2, 2, 2, 0.8);
+    }
+
+    form {
+        .form-floating {
+            font-size: 125%;
+            color: #000;
+            text-shadow: 2px 4px 5px rgba(255, 255, 255, 0.8), 1px 1px 1px rgba(2, 2, 2, 0.8);
+        }
+    }
+
 }
 
 
 main {
     font-size: medium;
-    margin: 25px 0 25px 0;
     // display: flex;
     // justify-content: center;
 
@@ -80,43 +133,50 @@ main {
 
 footer {
     display: flex;
-    position: fixed;
+    position: relative;
     bottom: 0;
     justify-content: center;
+    padding: 0 0 20px 0;
+    // margin-top: 25px;
+
+    a {
+        text-decoration: none;
+    }
+
+    h4 {
+        font-weight: bold;
+    }
+
+    h4,
+    p {
+        align-content: center;
+        font-size: 250%;
+    }
 }
 
-// @media screen and (min-width: 1200px) {
+@media screen and (max-width: 360px) {
 
-//     //css code
-//     .portrait {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
+    footer {
 
-//         margin: 25px 0 50px 0;
+        h4,
+        p {
+            align-content: center;
+            font-size: 125%;
+        }
+    }
 
-//         img {
-//             // height: 100vh;
-//             width: 45%;
-//             box-shadow: 2px 2px 5px black, 2px 2px 5px black, 3px 3px 15px white !important;
-//         }
-//     }
+    .formTeiner {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        margin: 5px 0 10px 0;
 
-//     body {
-//         header {
-//             margin-top: 50px;
-//             // display: flex;
-//             // position: fixed;
-//         }
+        .btn-primary {
+            font-size: 15px;
+            background-color: #97D9E1;
+            border-color: #97D9E1;
+            box-shadow: 1px 1px 2px black, 1px 1px 4px #fff;
+        }
+    }
 
-//     }
-
-//     footer {
-//         display: flex;
-//         position: fixed;
-//         bottom: 0;
-//         justify-content: center;
-//         // align-items: center;
-//         // align-content: center;
-//     }
-// }
+}

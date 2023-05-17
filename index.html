@@ -45,6 +45,12 @@
                             placeholder="tu E-mail" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
                             required>
                         <label for="asistencia" class="form-label">E-mail:</label>
+                        <div class="valid-feedback">
+                            así si!
+                        </div>
+                        <div class="invalid-feedback">
+                            así no!
+                        </div>
                     </div>
 
                     <div class="col-md-6 form-floating">
@@ -52,7 +58,10 @@
                             required>
                         <label for="nombre" class="form-label">Nombre:</label>
                         <div class="valid-feedback">
-                            Looks good!
+                            así si!
+                        </div>
+                        <div class="invalid-feedback">
+                            Vacío no!
                         </div>
                     </div>
 
@@ -60,13 +69,25 @@
                         <input type="text" class="form-control" id="apellido" name="apellido" placeholder="tu Apellido"
                             required>
                         <label for="apellido" class="form-label">Apellido:</label>
+                        <div class="valid-feedback">
+                            así si!
+                        </div>
+                        <div class="invalid-feedback">
+                            Vacío no!
+                        </div>
                     </div>
 
 
                     <div class="col-md-6 form-floating">
                         <input type="number" class="form-control" id="cantidad" name="cantidad"
-                            placeholder="Cuantos son?" required>
+                            placeholder="Cuantos son?" required min="1">
                         <label for="cantidad" class="form-label">Cantidad de personas a asistir:</label>
+                        <div class="valid-feedback">
+                            así si!
+                        </div>
+                        <div class="invalid-feedback">
+                            Vacío no!
+                        </div>
                     </div>
 
                     <div class="col-12 text-center my-4">

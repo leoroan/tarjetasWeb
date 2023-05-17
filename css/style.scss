@@ -102,6 +102,17 @@ body {
         }
     }
 
+    input {
+        font-size: 100%;
+        font-weight: 900;
+        // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-indent: 75px;
+    }
+
+    #cantidad {
+        text-indent: 250px;
+    }
+
     h2 {
         font-size: 475%;
         color: #97D9E1;
@@ -111,9 +122,13 @@ body {
 
     form {
         .form-floating {
-            font-size: 125%;
+            font-size: 150%;
             color: #000;
             text-shadow: 2px 4px 5px rgba(255, 255, 255, 0.8), 1px 1px 1px rgba(2, 2, 2, 0.8);
+        }
+
+        .invalid-feedback {
+            font-size: 2rem;
         }
     }
 

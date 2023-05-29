@@ -42,7 +42,8 @@ console.log("https://github.com/levinunnink/html-form-to-google-sheet");
         })
           .then(() => {
             alert("registrado correctamente");
-            form.reset();
+            // form.reset();
+            location.reload();
           });
       }
       form.classList.add('was-validated');

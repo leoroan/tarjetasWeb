@@ -1,17 +1,42 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-@keyframes come-in {
+
+@-webkit-keyframes come-in {
   0% {
-    transform: translatey(100px);
+    -webkit-transform: translatey(100px);
+            transform: translatey(100px);
     opacity: 0;
   }
   30% {
-    transform: translateX(-50px) scale(0.4);
+    -webkit-transform: translateX(-50px) scale(0.4);
+            transform: translateX(-50px) scale(0.4);
   }
   70% {
-    transform: translateX(0px) scale(1.2);
+    -webkit-transform: translateX(0px) scale(1.2);
+            transform: translateX(0px) scale(1.2);
   }
   100% {
-    transform: translatey(0px) scale(1);
+    -webkit-transform: translatey(0px) scale(1);
+            transform: translatey(0px) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes come-in {
+  0% {
+    -webkit-transform: translatey(100px);
+            transform: translatey(100px);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: translateX(-50px) scale(0.4);
+            transform: translateX(-50px) scale(0.4);
+  }
+  70% {
+    -webkit-transform: translateX(0px) scale(1.2);
+            transform: translateX(0px) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translatey(0px) scale(1);
+            transform: translatey(0px) scale(1);
     opacity: 1;
   }
 }
@@ -22,7 +47,7 @@
 
 html, body {
   background: #eaedf2;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .floating-container {
@@ -33,29 +58,28 @@ html, body {
   right: 0;
   margin: 35px 25px;
 }
-
 .floating-container:hover {
   height: 250px;
 }
-
 .floating-container:hover .floating-button {
   box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
-  transform: translatey(5px);
+  -webkit-transform: translatey(5px);
+          transform: translatey(5px);
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-
 .floating-container:hover .element-container .float-element:nth-child(1) {
-  animation: come-in 0.4s forwards 0.2s;
+  -webkit-animation: come-in 0.4s forwards 0.2s;
+          animation: come-in 0.4s forwards 0.2s;
 }
-
 .floating-container:hover .element-container .float-element:nth-child(2) {
-  animation: come-in 0.4s forwards 0.4s;
+  -webkit-animation: come-in 0.4s forwards 0.4s;
+          animation: come-in 0.4s forwards 0.4s;
 }
-
 .floating-container:hover .element-container .float-element:nth-child(3) {
-  animation: come-in 0.4s forwards 0.6s;
+  -webkit-animation: come-in 0.4s forwards 0.6s;
+          animation: come-in 0.4s forwards 0.6s;
 }
-
 .floating-container .floating-button {
   position: absolute;
   width: 75px;
@@ -73,9 +97,9 @@ html, body {
   z-index: 100;
   box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-
 .floating-container .float-element {
   position: relative;
   display: block;
@@ -89,106 +113,22 @@ html, body {
   line-height: 50px;
   z-index: 0;
   opacity: 0;
-  transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
-
 .floating-container .float-element .material-icons {
   vertical-align: middle;
   font-size: 16px;
 }
-
 .floating-container .float-element:nth-child(1) {
   background: #42A5F5;
   box-shadow: 0 20px 20px -10px rgba(66, 165, 245, 0.5);
 }
-
 .floating-container .float-element:nth-child(2) {
   background: #4CAF50;
   box-shadow: 0 20px 20px -10px rgba(76, 175, 80, 0.5);
 }
-
 .floating-container .float-element:nth-child(3) {
   background: #FF9800;
   box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
 }
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  border-radius: 7px;
-  box-shadow: 1px 1px 25px #fff, 1px 1px 50px black;
-}
-
-.ribbon {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  position: absolute;
-}
-
-.ribbon::before,
-.ribbon::after {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  display: block;
-  border: 5px solid #2980b9;
-}
-
-.ribbon span {
-  position: absolute;
-  display: block;
-  width: 225px;
-  padding: 15px 0;
-  background-color: #3498db;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  color: #fff;
-  font: 700 18px/1 "Lato", sans-serif;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
-/* top left*/
-.ribbon-top-left {
-  top: -10px;
-  left: -10px;
-}
-
-.ribbon-top-left::before,
-.ribbon-top-left::after {
-  border-top-color: transparent;
-  border-left-color: transparent;
-}
-
-.ribbon-top-left::before {
-  top: 0;
-  right: 0;
-}
-
-.ribbon-top-left::after {
-  bottom: 0;
-  left: 0;
-}
-
-.ribbon-top-left span {
-  right: -25px;
-  top: 30px;
-  transform: rotate(-45deg);
-}/*# sourceMappingURL=style2.css.map */

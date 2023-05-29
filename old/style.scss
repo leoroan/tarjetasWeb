@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+$colorPrincipal :#D9AFD9;
+$colorSecundario :#97D9E1;
+
+html {
+    width: auto;
+    height: 100vh;
+}
+
+
+body {
+    // background-color: $colorPrincipal !important;
+    background-image: linear-gradient(0deg, $colorPrincipal 0%, $colorSecundario 100%);
+    background-attachment: fixed;
+    margin: 25px 0 15px 0;
+    height: 100vh;
+
+    header {
+        margin-top: 15px;
+        position: relative;
+
+        h1 {
+            font-size: 700%;
+            font-weight: bold;
+            color: #D9AFD9;
+            text-shadow: 2px 4px 5px rgba(255, 255, 255, 0.8), 2px 4px 1px rgba(2, 2, 2, 0.8);
+        }
+    }
+}
+
+.portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 5px 0;
+
+    img {
+        width: auto;
+        // width: 50%;
+        height: auto;
+        border-radius: 15px !important;
+        box-shadow: 2px 2px 5px black, 2px 2px 5px black, 3px 3px 15px white !important;
+        transition: transform 0.4s ease-in-out;
+        animation: none;
+
+        &:hover {
+            transform: scale(1.1);
+            animation: shake 0.4s ease-in-out;
+            transition: transform 0.2s ease-in-out;
+        }
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    75% {
+        transform: translateX(5px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+.formTeiner {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 25px 0 20px 0;
+
+    .btn-primary {
+        font-size: 35px;
+        background-color: #97D9E1;
+        border-color: #97D9E1;
+        box-shadow: 1px 1px 2px black, 1px 1px 4px #fff;
+
+        &:hover {
+            background-color: #D9AFD9;
+            border-color: #ebddeb;
+        }
+    }
+
+    input {
+        font-size: 100%;
+        font-weight: 900;
+        // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-indent: 75px;
+    }
+
+    #cantidad {
+        text-indent: 250px;
+    }
+
+    h2 {
+        font-size: 475%;
+        color: #97D9E1;
+        font-weight: bold;
+        text-shadow: 2px 4px 5px rgba(255, 255, 255, 0.8), 1px 1px 1px rgba(2, 2, 2, 0.8);
+    }
+
+    form {
+        .form-floating {
+            font-size: 150%;
+            color: #000;
+            text-shadow: 2px 4px 5px rgba(255, 255, 255, 0.8), 1px 1px 1px rgba(2, 2, 2, 0.8);
+        }
+
+        .invalid-feedback {
+            font-size: 2rem;
+        }
+    }
+
+}
+
+
+main {
+    font-size: medium;
+    // display: flex;
+    // justify-content: center;
+
+    h1 {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+footer {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    justify-content: center;
+    padding: 0 0 20px 0;
+    // margin-top: 25px;
+
+    a {
+        text-decoration: none;
+    }
+
+    h4 {
+        font-weight: bold;
+    }
+
+    h4,
+    p {
+        align-content: center;
+        font-size: 250%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    footer {
+
+        h4,
+        p {
+            align-content: center;
+            font-size: 125%;
+        }
+    }
+
+    .formTeiner {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        margin: 5px 0 10px 0;
+
+        .btn-primary {
+            font-size: 15px;
+            background-color: #97D9E1;
+            border-color: #97D9E1;
+            box-shadow: 1px 1px 2px black, 1px 1px 4px #fff;
+        }
+    }
+
+}

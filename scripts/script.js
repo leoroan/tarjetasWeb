@@ -50,3 +50,15 @@ console.log("https://github.com/levinunnink/html-form-to-google-sheet");
     }, false);
   })
 })()
+
+
+// OTHER FUNCS
+
+function mostrarCampo(valor) {
+  var campoAdicional = document.getElementById("campoAdicional");
+  if (valor === "si") {
+    campoAdicional.style.display = "block";
+  } else {
+    campoAdicional.style.display = "none";
+  }
+}

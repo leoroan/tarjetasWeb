@@ -1,5 +1,5 @@
-console.log("credits:");
-console.log("https://github.com/levinunnink/html-form-to-google-sheet");
+// console.log("credits:");
+// console.log("https://github.com/levinunnink/html-form-to-google-sheet");
 
 //the old-fashioned way
 // window.addEventListener("load", function () {
